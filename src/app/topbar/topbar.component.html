@@ -1,0 +1,26 @@
+<div class="ws-topbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Web CMS</a>
+
+        <div class="nav collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="justify-content-end" fill-width-xs>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown" style="display: flex">
+                        <div class="ws-topbar-user-icon">
+                            <img [src]="user.image" alt="">
+                        </div>
+                        <a class="nav-link dropdown-toggle" href="javascript:void(0);" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            {{ user.name }}
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="javascript:void(0);" (click)="gotoProfile()">Profile</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="javascript:void(0);" (click)="logoutUser()">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>

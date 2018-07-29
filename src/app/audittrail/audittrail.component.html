@@ -1,0 +1,24 @@
+<h4>Audit Trail</h4>
+<p>
+  Here you are able to see all the transactions that has been done by the system users.
+</p>
+<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>User ID</th>
+      <th>User Role</th>
+      <th>Log</th>
+      <th>Date Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let log of auditlogs">
+      <td>{{ log.id }}</td>
+      <td>{{ log.userId }}</td>
+      <td>{{ log.userRole }}</td>
+      <td>{{ log.logs }}</td>
+      <td>{{ log.createdDate }}</td>
+    </tr>
+  </tbody>
+</table>

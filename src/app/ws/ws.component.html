@@ -1,0 +1,19 @@
+<app-topbar></app-topbar>
+<div class="row clearfix ws-main">
+  <div class="ws-sidenav-wrap col-md-3 col-sm-4 col-12">
+    <app-sidenav></app-sidenav>
+  </div>
+  <div class="ws-body-wrap col-md-9 col-sm-8 col-12">
+    <div class="ws-body">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<!-- Preloader -->
+<ng-template class="ws-preloader-load-bar" #wspreloader>
+  <div class="ws-preloader-bar"></div>
+  <div class="ws-preloader-bar"></div>
+  <div class="ws-preloader-bar"></div>
+</ng-template>
+<!-- Preloader -->

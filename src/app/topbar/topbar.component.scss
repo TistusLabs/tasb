@@ -1,0 +1,204 @@
+@import '../../variables';
+@import '../../messages';
+
+.ws-topbar {
+  position: relative;
+  z-index: 10000;
+  //height: 120px;
+  width:100%;
+  background: #fff;
+  padding: 5px 10px;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+  .ws-main-search {
+    position: relative;
+    color: #aaa;
+    display: inline-block;
+    width: 100%;
+    form {
+      display: flex;
+    }
+    &>i.material-icons {
+      position: absolute;
+      color: #aaa;
+      font-size: 18px;
+      height: 18px;
+      top: 0px;
+      bottom: 0px;
+      left: 10px;
+      margin: auto;
+    }
+    input {
+      padding: 7px 10px 7px 40px;
+      width: calc(100% - 30px);
+      // max-width: 600px;
+      // width: 600px;
+    }
+  }
+  .ws-topbar-user-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    background: $ws-color-primary;
+    border-radius: 100%;
+    img {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+    }
+  }
+  .navbar-brand {
+    margin: 0;
+    padding: 0;
+    img {
+      width: 130px;
+    }
+  }
+  .navbar-collapse {
+    justify-content: flex-end;
+  }
+  nav {
+    background: #fff!important;
+  }
+  .ws-topbar-fixed-elems-wrap {
+    display: flex;
+    padding-top : 10px;
+  }
+  .ws-topbar-filters {
+    padding: 20px 20px 0 20px;
+
+    .ws-addbtn-wrap {
+      .dropdown-menu {
+        width: 250px;
+        padding: 10px;
+      }
+    }
+  }
+  #initNewFolder {
+    width: 240px;
+    padding: 5px;
+  }
+  #initNewFile {
+    .modal-dialog {
+      // max-width: 600px;
+      // width: 600px;
+    }
+  }
+  .ws-addbtn-wrap,
+  .ws-filters-wrap {
+    padding: 0!important;
+  }
+  #xsToggleSearchBtn {
+    display: none;
+  }
+  #xsCloseSearchBtn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+@media (max-width: 576px) {
+  .ws-topbar {
+    height: auto;
+    #xsToggleSearchBtn {
+      display: block;
+    }
+    .ws-main-search {
+      width: 0px;
+      transition: all $ws-transition-time;
+      overflow: hidden;
+      input {
+        width: 0px;
+        padding: 0;
+        border-radius: 0;
+        border: none;
+        border-bottom: solid 1px $ws-border-color-primary;
+      }
+      &.ws-main-search-xs-active {
+        position: fixed;
+        background: #fff;
+        padding: 5px;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 10000;
+        box-shadow: 0 1px 5px $ws-border-color-primary;
+        input {
+          padding: 0 10px;
+          margin-left: 30px;
+          width: calc(100% - 70px);
+        }
+      }
+    }
+    .navbar-brand {
+      width: auto;
+      margin-right: auto;
+      font-size: 16px;
+      padding: 5px 0;
+    }
+    .navbar-nav {
+      .nav-item {
+        display: block!important;
+        .ws-topbar-user-icon {
+          float: left;
+        }
+      }
+    }
+    .ws-addbtn-wrap {
+      margin: 0;
+      width: auto;
+    }
+    #addNewDropdown{
+      padding: 5px;
+      width: 40px;
+      height: 40px;
+      line-height: 0;
+      &.ws-text-icon {
+        span:first-child {
+          font-size: 30px;
+        }
+        span:last-child {
+          display: none;
+        }
+      }
+    }
+    .ws-topbar-filters {
+      padding: 10px 20px !important;
+    }
+    .ws-filters-wrap {
+      .ws-list-horizontal {
+        .nav-item {
+          margin-left: 20px;
+          text-align: center; 
+        }
+      }
+    }
+    .ws-topbar-fixed-elems-wrap {
+      width: auto;
+      padding: 0;
+      justify-content: flex-end;
+    }
+    #initNewFolder {
+      width: auto;
+    }
+  }
+}
+@media (min-width: 576px) {
+  .navbar {
+    padding: 0;
+  }
+  .navbar-brand {
+    width: auto;
+    margin-right: auto;
+  }
+  .ws-addbtn-wrap {
+    margin-right: auto;
+    width: 120px;
+  }
+  .ws-homebtn-wrap {
+    margin-right: auto;
+  }
+}

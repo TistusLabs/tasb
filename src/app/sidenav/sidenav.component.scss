@@ -1,0 +1,39 @@
+@import '../../variables';
+
+.ws-sidenav {
+  // height: 100%;
+  width: 100%;
+  padding: $ws-padding-outer;
+  .ws-sidenav-item {
+    font-weight: 500;
+    padding: $ws-padding-inner-secondray;
+    -webkit-transition: background $ws-transition-time;
+    -moz-transition: background $ws-transition-time;
+    -ms-transition: background $ws-transition-time;
+    -o-transition: background $ws-transition-time;
+    transition: background $ws-transition-time;
+    .ws-list-item-icon {
+      font-size: 24px;
+    }
+    &:first-child {
+      margin-bottom: $ws-margin-primary;
+    }
+    .ws-sidenav-item {
+      font-weight: normal;
+      margin-bottom: 0 !important;
+      padding: $ws-padding-inner-secondray 0 $ws-padding-inner-secondray $ws-padding-outer!important;
+      .ws-list-item-icon {
+        font-size: 20px;
+      }
+    }
+    hr {
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .ws-sidenav {
+    padding: 50px 20px 20px 20px;
+  }
+}

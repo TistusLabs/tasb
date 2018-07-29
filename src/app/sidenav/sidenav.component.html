@@ -1,0 +1,25 @@
+<div class="ws-xs-breadcrumb" (click)="toggleBreadcrumb()">
+  <span class="ws-bc-selected-section">{{xsBreadcrumbInfo.selectedSection}}</span>
+  <button class="ws-abs-button">
+    <i class="material-icons">{{xsSidenavState ? 'keyboard_arrow_up' : 'keyboard_arrow_down'}}</i>
+  </button>
+</div>
+<div class="ws-sidenav">
+  <ul class="ws-list ws-iconed-list">
+    <li class="ws-sidenav-item ws-list-item clickable ws-hover-flat-primary" *ngFor="let snitem of sidenavList">
+      <!-- routerLink="/ws/dashboard" -->
+      <a data-toggle="collapse" href="{{'#'+snitem.id}}">
+        <i class="material-icons ws-list-item-icon">folder</i>
+        <span class="ws-list-item-text">{{snitem.name}}</span>
+      </a>
+      <div class="collapse" id="{{snitem.id}}">
+        <ul class="ws-list ws-iconed-list">
+          <li class="ws-sidenav-item ws-list-item clickable ws-hover-flat-primary" *ngFor="let snichild of snitem.children" (click)="goToRoute('/ws/dashboard',snichild.id)">
+            <i class="material-icons ws-list-item-icon">folder</i>
+            <span class="ws-list-item-text">{{ snichild.name }}</span>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>
