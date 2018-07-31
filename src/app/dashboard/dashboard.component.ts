@@ -66,6 +66,10 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
     }
 
+    ngOnDestroy() {
+
+    }
+
     editTeam(t)  {
         for (let i = 0; i < this.team.length; i++) {
             if (this.team[i].team_id === t) {
